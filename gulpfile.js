@@ -72,11 +72,11 @@ gulp.task("dev", [ "clean" ], cb => {
         historyApiFallback: true,
         stats: { colors: true },
         contentBase: "./public"
-    }).listen(3000, "localhost", err => {
+    }).listen(4000, "localhost", err => {
         if (err) {
             throw new gutil.PluginError("webpack-dev-server", err);
         }
-        const uri = "http://127.0.0.1:3000/";
+        const uri = "http://127.0.0.1:4000/";
         gutil.log("[webpack-dev-server]", uri);
         gulp.src("").pipe(open({ uri }));
     });
